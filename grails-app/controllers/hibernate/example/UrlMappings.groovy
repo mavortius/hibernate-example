@@ -16,6 +16,12 @@ class UrlMappings {
             }
         }
 
+        "/clientes"(resources: "cliente") {
+            collection {
+                '/pesquisa'(controller:'cliente', action: 'pesquisa')
+            }
+        }
+
         "/"(controller: 'application', action:'index')
         "500"(view: '/error')
         "404"(view: '/notFound')

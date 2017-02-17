@@ -1,0 +1,8 @@
+import hibernate.example.Cliente
+
+model {
+	Iterable<Cliente> clienteList
+}
+
+json tmpl.cliente(clienteList ?: [])
+
