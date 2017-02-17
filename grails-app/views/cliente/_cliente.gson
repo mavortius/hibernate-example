@@ -4,4 +4,10 @@ model {
 	Cliente cliente
 }
 
-json g.render(cliente)
+json {
+	id cliente.id
+	nome cliente.nome
+	dataNascimento cliente.dataNascimento.format('dd/MM/yyyy')
+	telefone cliente.telefone
+}
+

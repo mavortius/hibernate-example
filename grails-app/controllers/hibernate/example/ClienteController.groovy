@@ -14,7 +14,7 @@ class ClienteController extends RestfulController {
     def pesquisa(String n, Integer max) {
         if(n) {
             def query = Cliente.where {
-                nome ==~ "%${n}%"
+                nome =~ "%${n}%"
             }
             respond query.list(max: Math.min(max ?: 10, 100))
         } else {
